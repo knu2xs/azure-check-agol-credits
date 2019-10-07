@@ -18,8 +18,18 @@ The script expects the Word Document, the request form, is located at `./resourc
 
 Environment variables in Azure Functions are admitteldy a little confusing to understand from the [Azure documentation](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python#environment-variables). During local testing execution these values are [loaded from the `Values` key in the `local.settings.json` file](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#local-settings-file). Once published, these values are loaded from the [Application Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings#settings) in the Azure Function. This means, for the function to work, you must add the same key value pairs to both the `Values` section in the `local.settings.json` file for testing, and the Application Settings for the Function in the Azure portal for production.
 
-While this seems a little difficult to sort out at first, it does have a definite upside. None of your personal information nor 
+While this seems a little difficult to sort out at first, it does have a definite upside. None of your personal information, usernames, or passwords are stored anywhere in the script. Also, it makes it REALLY easy to change any of the email recepients.
 
 ## It IS Open Source
 
 While this is a pretty custom workflow, this pattern of monitoring ArcGIS Online metrics using an Azure Function, and using a scheduled Azure Function to provide notificaiton with the right resources to address the issue, this is something much more universal. Since completely open source in every sense of the word, please feel free to use as much or as little of the code in this repo as you like. Obviously I will not really know if you don't give me credit, but if you do find this useful, and you use it, I appreaciate you giving me credit for it.
+
+## Leagalese and Such
+
+Copyright 2019 Joel McCune
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,either express or implied. See the License for the specific language governing permissions and limitations under the License.
